@@ -30,7 +30,7 @@ table {
 
 th {
   border-bottom: 1px solid #e8e8e8;
-  padding: 15px;
+  padding: 13px;
   text-align: left;
   font-size: 14px;
   color: #585858;
@@ -38,10 +38,14 @@ th {
 
 td {
   font-size: 12px;
-  padding: 15px;
+  padding-left: 12px;
 }
 
 .image {
   width: 40px;
   height: auto;
+}
+
+.price {
+  font-weight: bold;
 }
