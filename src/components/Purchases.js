@@ -49,21 +49,21 @@ export function  Purchases() {
       )}
       <table>
         <tr>
-            <th>Name</th>
+            <th width="20%">Name</th>
             <th>Location</th>
-            <th>Purchase Date</th>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th></th>
+            <th width="15%">Purchase Date</th>
+            <th width="10%">Category</th>
+            <th width="20%">Description</th>
+            <th className="price-header" width="5%">Price</th>
+            <th width="5%"></th>
         </tr>
             {data && data.map((purchase, index) => (
         <tbody>
                 <tr key={index}>
-                    <td style={{textTransform: 'capitalize'}}>
+                    <td style={{textTransform: 'capitalize'}} width="20%">
                         <b>{purchase.name}</b>
                     </td>
-                    <td>
+                    <td className="location">
                         <img src={purchase?.location} className="product-image" alt="product"/>
                     </td>
                     <td>
