@@ -18,7 +18,7 @@ table {
   width: 80%;
   margin-left: 3rem;
   border-radius: 10px;
-  table-layout: fixed;
+  /* table-layout: fixed; */
 }
 
 th {
@@ -32,15 +32,44 @@ th {
 td {
   font-size: 12px;
   padding-left: 12px;
+  /* max-width: 200px; */
+  /* width: 150px; */
 }
 
 .price-header {
   text-align: right;
 }
+
+.category-header {
+  text-align: center;
+}
+
 .product-image {
   width: 40px;
   height: auto;
   padding-left: 10px;;
+}
+
+td.purchase-date {
+  /* max-width: 150px; */
+  /* width: 5%; */
+  /* white-space: nowrap; */
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding-left: 0px;
+}
+.category-box {
+  text-align: center;
+  justify-content: center;
+  border: 1px solid;
+  display: inline-block;
+  padding: .5em;
+  margin-top: 10px;
 }
 
 .description {
