@@ -4,7 +4,8 @@ export function  Purchases() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [pDate, setPDate] = useState([]);
+    const [pDate] = useState([]);
+    const [pPrice] = useState([]);
 
     const options = {  month: 'long', year: 'numeric',  day: 'numeric' };
 
@@ -25,6 +26,7 @@ export function  Purchases() {
             for (var i=0; i <= actualData.length; i++) {
                 date = new Date(actualData[i]?.purchaseDate)
                 pDate.push(date.toLocaleDateString('en-US', options));
+                pPrice.push((actualData[i]?.price)/100);
             }
             setError(null);
         })
@@ -53,15 +55,16 @@ export function  Purchases() {
             <th>Category</th>
             <th>Description</th>
             <th>Price</th>
+            <th></th>
         </tr>
-        <tbody>
             {data && data.map((purchase, index) => (
+        <tbody>
                 <tr key={index}>
                     <td style={{textTransform: 'capitalize'}}>
                         <b>{purchase.name}</b>
                     </td>
                     <td>
-                        <img src={purchase?.location} className="image" alt="product"/>
+                        <img src={purchase?.location} className="product-image" alt="product"/>
                     </td>
                     <td>
                         {pDate[index]}
@@ -69,15 +72,18 @@ export function  Purchases() {
                     <td>
                         {purchase.category}
                     </td>
-                    <td>
+                    <td className="description">
                         {purchase.description}
                     </td>
                     <td className="price">
-                        ${purchase.price}
+                        ${pPrice[index]}
+                    </td>
+                    <td className="dots">
+                        &#8942;
                     </td>
                 </tr>
-            ))}
         </tbody>
+            ))}
       </table>
     </div>
 }
