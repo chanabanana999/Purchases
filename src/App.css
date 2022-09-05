@@ -3,10 +3,6 @@
   height: 100vh;
 }
 
-.App-header {
-  font-size: calc(10px + 2vmin);
-}
-
 h2 {
   padding-left: 4rem;
   font-size: 30px;
@@ -18,7 +14,6 @@ table {
   width: 80%;
   margin-left: 3rem;
   border-radius: 10px;
-  /* table-layout: fixed; */
 }
 
 th {
@@ -26,14 +21,11 @@ th {
   padding: 13px;
   text-align: left;
   font-size: 14px;
-  color: #585858;
 }
 
 td {
   font-size: 12px;
   padding-left: 12px;
-  /* max-width: 200px; */
-  /* width: 150px; */
 }
 
 .price-header {
@@ -50,19 +42,15 @@ td {
   padding-left: 10px;;
 }
 
-td.purchase-date {
-  /* max-width: 150px; */
-  /* width: 5%; */
-  /* white-space: nowrap; */
-}
-
 .category {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   padding-left: 0px;
+  color: var(--categoryColor);
 }
+
 .category-box {
   text-align: center;
   justify-content: center;
@@ -70,6 +58,7 @@ td.purchase-date {
   display: inline-block;
   padding: .5em;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .description {
@@ -84,4 +73,54 @@ td.purchase-date {
 .dots {
   font-size: 20px;
   text-align: center;
+}
+
+.mobile-header {
+  padding-left: 0px;
+  font-size: 20px;
+}
+
+.mobile-purchases {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem)); */
+  gap: 5px;
+  justify-content: center;
+}
+
+.mobile-card{
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  /* justify-content: space-between; */
+  /* transition: transform 200ms ease-in; */
+}
+
+.mobile-image {
+  width: 15px;
+  height: auto;
+  padding-left: 5px;
+}
+
+.mobile-name {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-left: 5px;
+}
+
+.mobile-price {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  padding-right: 15px; 
+  margin-top: -15px;
+}
+
+aside {
+  font-size: 12px;
+  font-weight: bold;
 }
