@@ -63,6 +63,7 @@ export function  Purchases() {
         });
     }, []);
 
+    /* Here I am using window size for mobile demo purposes */
     if (window.innerWidth <= 768) {
         return <section className="mobile-purchases">
             <h2 className="mobile-header">Purchases</h2>
