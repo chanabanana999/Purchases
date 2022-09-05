@@ -76,11 +76,16 @@ export function  Purchases() {
         )}
         {data && data.map((purchase, index) => (
             <div className="mobile-card" key={index}>
-                <p>
+                <p style={{marginTop: '1rem'}}>
                     <span><img src={purchase?.location} className="mobile-image" alt="product"/></span>
                     <span className="mobile-name">{purchase?.name}</span>
                     <span className="mobile-price">${pPrice[index]}</span>
                 </p>
+                <p className="mobile-description">
+                    {purchase?.description}
+                </p>
+                <p className="mobile-purchase-date">Purchase Date</p>
+                <p className="mobile-date">{pDate[index]}</p>
             </div>
         ))}
     </div>
