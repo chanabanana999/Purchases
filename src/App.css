@@ -82,12 +82,12 @@ td {
 
 .mobile-purchases {
   display: grid;
-  gap: 5px;
+  gap: 7px;
   justify-content: center;
 }
 
 .mobile-card{
-  border: 1px solid #e8e8e8;
+  border: 1px solid #D3D3D3;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
