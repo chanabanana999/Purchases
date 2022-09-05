@@ -17,6 +17,9 @@ npm test
 
 ## Overview
 
+I made some assumptions:
+- I read the price in pennies and then converted it to dollars. Another way to do this would be to assume the prices were already in dollcars and then add ".00" after fetching. Either way, some conversion is required in order to display what was shown in the figma. I went with the first option since the figma showed values in the pennies.
+
 ## Things I Did That I Would Prefer To Change
 I used window size to check for mobile rendering. This is not the best since someone could take a laptop, make the browser window smaller, and they're not really a mobile user at that point. However, I thought it would be easier to review the code on a laptop, rather than spinning up a simulator to get the true mobile experience. I arbitrarily set 768px width as the breakpoint for a mobile vs. desktop experience, as tablets often go to 768px width. Unfortunately, since I couldn't get my resize event listener working properly, the user has to refresh the page if they are changing to more than or less than 768px width.
 
