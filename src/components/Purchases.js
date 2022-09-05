@@ -66,7 +66,7 @@ export function  Purchases() {
     /* Here I am using window size for mobile demo purposes */
     if (window.innerWidth <= 768) {
         return <section className="mobile-purchases">
-            <h2 className="mobile-header">Purchases</h2>
+            <h2 className="mobile-header" data-testid="purchases">Purchases</h2>
             {loading && <section>Data is loading. Please hold...</section>}
             {error && (
             <section>{`There is a problem fetching the data - ${error}`}</section>
@@ -90,7 +90,7 @@ export function  Purchases() {
         </section>
     } else {
         return <section className="desktop-purchases">
-            <h2>Purchases</h2>
+            <h2 data-testid="purchases">Purchases</h2>
             {loading && <section>Data is loading. Please hold...</section>}
             {error && (
             <section>{`There is a problem fetching the data - ${error}`}</section>
