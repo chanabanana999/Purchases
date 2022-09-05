@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Purchases project for ID.me by Chana Cohn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to Run the Code
 
-## Available Scripts
+```shell
+npm start
+```
+Please run this in Chrome if possible.
 
-In the project directory, you can run:
+To see the mobile view, make the browser less than 768px width and refresh the page.
+To see the desktop view, make the browser full screen (or almost full screen) and refresh the page.
 
-### `npm start`
+## To run the tests
+```shell
+npm test
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Things I Did That I Would Prefer To Change
+I used window size to check for mobile rendering. This is not the best since someone could take a laptop, make the browser window smaller, and they're not really a mobile user at that point. However, I thought it would be easier to review the code on a laptop, rather than spinning up a simulator to get the true mobile experience. I arbitrarily set 768px width as the breakpoint for a mobile vs. desktop experience, as tablets often go to 768px width. Unfortunately, since I couldn't get my resize event listener working properly, the user has to refresh the page if they are changing to more than or less than 768px width.
 
-### `npm test`
+It would be nice to have some pagination or a "See more" button rather than a wall of purchases.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I also did not get to interpreting the unicode characters that showed up in the descriptions. (Not sure if that was something I should be trying to do.)
 
-### `npm run build`
+## Accessibility
+I did my best to conform to semantic html standards. One place that could stand improvment was that I used spans on the mobile cards. I couldn't find a great semantic-compliant way of implementing spans in order to keep text inline and formatted according to the design.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dark mode would be great to add, too, but I did not get to that.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Things I Didn't Get To
+I'd prefer to add an event listener for changing screensizes if another method will not be used to determine mobile rendering.
 
-### `npm run eject`
+I could not figure out how to pass in colors to the styling elements based on where they were in the array. I have some logic that assigns colors by category, and that does work. However, passing them in to a style on the element or in CSS was not at all working for me. I would need to get more info on this.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I'd like to add more tests.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Purchases component got pretty big. I'd prefer to have child components for the mobile and desktop renders. I started attempting that, but it would take me too long to pass all the props down and get everything working great in both mobile and desktop versions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Nothing on either mobile or desktop is clickable at the moment. I wasn't sure if I was supposed to add some functionality for the three vertical dots on desktop.
