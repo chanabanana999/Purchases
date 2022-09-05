@@ -4,9 +4,9 @@ import { Purchases } from '../src/components/Purchases';
 
 function App() {
   return (
-    <div className="App">
+    <section className="App">
        <Purchases />
-    </div>
+    </section>
   );
 }
 

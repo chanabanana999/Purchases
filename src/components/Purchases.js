@@ -64,72 +64,77 @@ export function  Purchases() {
     }, []);
 
     if (window.innerWidth <= 768) {
-        return <div className="mobile-purchases">
+        return <section className="mobile-purchases">
             <h2 className="mobile-header">Purchases</h2>
-            {loading && <div>Data is loading. Please hold...</div>}
+            {loading && <section>Data is loading. Please hold...</section>}
             {error && (
-            <div>{`There is a problem fetching the data - ${error}`}</div>
+            <section>{`There is a problem fetching the data - ${error}`}</section>
             )}
             {data && data.map((purchase, index) => (
-                <div className="mobile-card" key={index}>
-                    <p style={{marginTop: '1rem'}}>
-                        <span><img src={purchase?.location} className="mobile-image" alt="product"/></span>
-                        <span className="mobile-name">{purchase?.name}</span>
-                        <span className="mobile-price">${pPrice[index]}</span>
-                    </p>
-                    <p className="mobile-description">
-                        {purchase?.description}
-                    </p>
-                    <p className="mobile-purchase-date">Purchase Date</p>
-                    <p className="mobile-date">{pDate[index]}</p>
-                </div>
+                <main>
+                    <section className="mobile-card" key={index}>
+                        <p style={{marginTop: '1rem'}}>
+                            <span><img src={purchase?.location} className="mobile-image" alt="product"/></span>
+                            <span className="mobile-name">{purchase?.name}</span>
+                            <span className="mobile-price">${pPrice[index]}</span>
+                        </p>
+                        <p className="mobile-description">
+                            {purchase?.description}
+                        </p>
+                        <p className="mobile-purchase-date">Purchase Date</p>
+                        <p className="mobile-date"><time>{pDate[index]}</time></p>
+                    </section>
+                </main>
             ))}
-        </div>
+        </section>
     } else {
-        return <div className="desktop-purchases">
+        return <section className="desktop-purchases">
             <h2>Purchases</h2>
-            {loading && <div>Data is loading. Please hold...</div>}
+            {loading && <section>Data is loading. Please hold...</section>}
             {error && (
-            <div>{`There is a problem fetching the data - ${error}`}</div>
+            <section>{`There is a problem fetching the data - ${error}`}</section>
         )}
-        <table>
-            <tr>
-                <th width="15%">Name</th>
-                <th width="8%">Location</th>
-                <th width="10%">Purchase Date</th>
-                <th className="category-header" width="10%">Category</th>
-                <th width="20%">Description</th>
-                <th className="price-header" width="5%">Price</th>
-                <th width="5%"></th>
-            </tr>
-                {data && data.map((purchase, index) => (
-            <tbody>
-                    <tr key={index}>
-                        <td style={{textTransform: 'capitalize'}}>
-                            <b>{purchase.name}</b>
-                        </td>
-                        <td className="location">
-                            <img src={purchase?.location} className="product-image" alt="product"/>
-                        </td>
-                        <td className="purchase-date">
-                            {pDate[index]}
-                        </td>
-                        <td className="category">
-                            <span className="category-box">{purchase.category}</span>
-                        </td>
-                        <td className="description">
-                            {purchase.description}
-                        </td>
-                        <td className="price">
-                            ${pPrice[index]}
-                        </td>
-                        <td className="dots">
-                            &#8942;
-                        </td>
-                    </tr>
-            </tbody>
-                ))}
-        </table>
-        </div>
+        <main>
+            <table>
+                <tr>
+                    <th width="15%">Name</th>
+                    <th width="8%">Location</th>
+                    <th width="10%">Purchase Date</th>
+                    <th className="category-header" width="10%">Category</th>
+                    <th width="20%">Description</th>
+                    <th className="price-header" width="5%">Price</th>
+                    <th width="5%"></th>
+                </tr>
+                    {data && data.map((purchase, index) => (
+                <tbody>
+                        <tr key={index}>
+                            <td style={{textTransform: 'capitalize'}}>
+                                <b>{purchase.name}</b>
+                            </td>
+                            <td className="location">
+                                <img src={purchase?.location} className="product-image" alt="product"/>
+                            </td>
+                            <td className="purchase-date"><time>
+                                {pDate[index]}
+                                </time>
+                            </td>
+                            <td className="category">
+                                <span className="category-box">{purchase.category}</span>
+                            </td>
+                            <td className="description">
+                                {purchase.description}
+                            </td>
+                            <td className="price">
+                                ${pPrice[index]}
+                            </td>
+                            <td className="dots">
+                                &#8942;
+                            </td>
+                        </tr>
+                </tbody>
+                    ))}
+            </table>
+        </main>
+    </section>
     }
 }
