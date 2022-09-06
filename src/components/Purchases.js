@@ -31,26 +31,26 @@ export function  Purchases() {
          * do get stored, but I had trouble assigning them either inline or in CSS.
          * I left them here to show the attempt.
          */
-        .then((actualData) => {
+        .then((responseData) => {
             categoryColor = [];
-            setData(actualData)
-            for (var i=0; i <= actualData.length; i++) {
-                date = new Date(actualData[i]?.purchaseDate)
+            setData(responseData)
+            for (var i=0; i <= responseData.length; i++) {
+                date = new Date(responseData[i]?.purchaseDate)
                 pDate.push(date.toLocaleDateString('en-US', options));
-                pPrice.push((actualData[i]?.price)/100);
-                if (actualData[i]?.category === 'Food') {
+                pPrice.push((responseData[i]?.price)/100);
+                if (responseData[i]?.category === 'Food') {
                     categoryColor.push('green')
-                } else if (actualData[i]?.category === 'Technology') {
+                } else if (responseData[i]?.category === 'Technology') {
                     categoryColor.push('black')
-                } else if (actualData[i]?.category === 'Footwear') {
+                } else if (responseData[i]?.category === 'Footwear') {
                     categoryColor.push('brown')
-                } else if (actualData[i]?.category === 'Travel') {
+                } else if (responseData[i]?.category === 'Travel') {
                     categoryColor.push('purple')
-                } else if (actualData[i]?.category === 'Entertainment') {
+                } else if (responseData[i]?.category === 'Entertainment') {
                     categoryColor.push('blue')
-                } else if (actualData[i]?.category === 'Automotive') {
+                } else if (responseData[i]?.category === 'Automotive') {
                     categoryColor.push('red')
-                } else if (actualData[i]?.category === 'Apparel') {
+                } else if (responseData[i]?.category === 'Apparel') {
                     categoryColor.push('orange')
                 } 
                 catStyle[i] = {

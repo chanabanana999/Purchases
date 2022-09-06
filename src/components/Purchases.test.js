@@ -1,8 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { unmountComponentAtNode } from "react-dom";
-import React from "react";
-
-
 import { act } from "react-dom/test-utils";
 import App from '../App';
 
