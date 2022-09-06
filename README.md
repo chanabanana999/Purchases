@@ -29,7 +29,7 @@ There are not a lot of tests. With more time, I would add a test for a failed fe
 This app reads in data from an API and creates a json. The response data displays in a table on the desktop and in cards if the window width is 768px width or less. Formatting is provided by `App.css`.
 
 I made some assumptions:
-- I read the price in pennies and then converted it to dollars. Another way to do this would be to assume the prices were already in dollcars and then add ".00" after fetching. Either way, some conversion is required in order to display what was shown in the figma. I went with the first option since the figma showed values in the pennies.
+- I read the price in cents and then converted it to dollars. Another way to do this would be to assume the prices were already in dollcars and then add ".00" after fetching. Either way, some conversion is required in order to display what was shown in the figma. I went with the first option since the figma showed values in the cents.
 
 - I also made the assumption that nothing is interactive in this iteration because nothing was shown to be interactive in the Figma design.
 
