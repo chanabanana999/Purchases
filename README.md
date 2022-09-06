@@ -40,27 +40,27 @@ I made some assumptions:
 - The page needs to be refreshed when changing the 768px width threshhold to see the table v. cards. This is not ideal, more on that below.
 
 ## Things I Did That I Would Prefer To Change
-- I used window size to check for mobile rendering. This is not the best since someone could take a laptop, make the browser window smaller, and they're not really a mobile user at that point, it's just a smaller window. However, I thought it would be easier to review the code on a laptop, rather than spinning up a simulator to get the true mobile experience. I arbitrarily set 768px width as the breakpoint for a mobile vs. desktop experience, as tablets often go to 768px width. Unfortunately, since I couldn't get my resize event listener working properly, the user has to refresh the page if they are changing to more than or less than 768px width.
+- I used window size to check for mobile rendering. This is not the best since someone could take a laptop, make the browser window smaller, and they're not really a mobile device user at that point, it's just a smaller window. However, I thought it would be easier to review the code on a laptop in a browser, rather than spinning up a simulator to get the true mobile experience. I arbitrarily set 768px width as the breakpoint for a mobile vs. desktop experience, as tablets often go to 768px width. Unfortunately, since I couldn't get my resize event listener working properly, the user has to refresh the page if they are changing to more than or less than 768px width.
 
 - It would be nice to have some pagination or a "See more" button rather than a wall of purchases. That would take a bit more time but look nicer.
 
-- I also did not get to interpreting the unicode characters that showed up in the descriptions. (Not sure if that was something I should be trying to do.) For now I left those as is.
+- I also did not get to interpreting the unicode characters that showed up in the descriptions. (Not sure if that was something I should be trying to do.) For now I left those as is from the data that was read in.
 
 ## Accessibility
-- I did my best to conform to semantic html standards. One place that could stand improvment was that I used spans on the mobile cards. I couldn't find a great semantic-compliant way of implementing spans in order to keep text inline and formatted according to the design. This may require more investigation.
+- I did my best to conform to semantic html standards. One place that could stand improvment was that I used spans on the mobile cards, and I don't think spans are supported in semantic html. I couldn't find a great semantic-compliant way of implementing spans in order to keep text inline and formatted according to the design. This may require more investigation.
 
-- Dark mode would be great to add, too, but I did not get to that.
+- Dark mode would also be great to add, too, but I did not get to that.
 
 ## Things I Didn't Get To
 - I'd prefer to add an event listener for changing screensizes if another method will not be used to determine mobile rendering, such as max touchpoints or checking the browser for device type.
 
-- I could not figure out how to pass in colors to the styling elements based on where they were in the array. I have some logic that assigns colors by category, and that does work. However, passing them in to a style on the element or in CSS was not at all working for me. I would need to get more info on this. I thought I could create an array of styles and bring those in, but that will take more time. This part of the design I was not able to accomplish in the timeframe.
+- I could not figure out how to pass in colors to the styling elements based on where they were in the array. I have some logic that assigns colors by category, and that does work. However, passing them in to a style on the element or in CSS was not at all working for me. I would need to get more info on this. I thought I could create an array of styles and bring those in, but that will take more time. This part of the design I was not able to accomplish in the timeframe. (It's also possible that I misinterpreted the figma and that colorad were supposed to replicate not by category, but in the order of gray, green, blue, red. I still would have to take more time to figure out how to bind those.)
 
-- I'd like to add more tests. Right now I'm checking that the section renders and that a fetch is called. I'd like to add a check for failure conditions that are in the code, such as if the fetch fails or if something else goes wrong in reading the data.
+- I'd like to add more tests. Right now I'm checking that the section renders and that a fetch is called. I'd like to add a check for failure conditions that are in the code, such as if the fetch fails or if something else goes wrong in reading the data. I'd also like to test that the data renders correctly.
 
-- The Purchases component got pretty big. I'd prefer to have child components for the mobile and desktop render versions. I started attempting that, but it got cumbersome trying to pass all the props down and get everything working great in both mobile and desktop versions.
+- The Purchases component got pretty big. I'd prefer to have child components for the mobile and desktop render versions. I started attempting that, but it got cumbersome trying to pass all the props down and get everything working great in both mobile and desktop versions. In retrospect, I probably should have gotten that part working first cand had the data pass down to child components.
 
-- It might have been cool to make the three vertical dots be clickable and then to display a message. (I didn't do this.)
+- It might have been cool to make the three vertical dots on the desktop be clickable and then to display a message. (I didn't do this, but it would be a nice touch.)
 
 ## Conclusion
 This was an enjoyable and challenging project. I did my best to hit all the concepts I thought the Figma and the requirements were driving toward, although I would prefer to be more thorough, such as in testing or getting the category colors to change.
