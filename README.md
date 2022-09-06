@@ -23,8 +23,8 @@ There are not a lot of tests. With more time, I would add a test for a failed fe
 
 ## Overview
 
-Project instructions: https://www.dropbox.com/s/dncrz21vx6983lo/Frontend-Interview.pdf?dl=0
-Project Figma design: https://www.figma.com/file/h3G2z8II4ZRM1gv3CCUHTq/Data-Table?node-id=0%3A1
+- Project instructions: https://www.dropbox.com/s/dncrz21vx6983lo/Frontend-Interview.pdf?dl=0
+- Project Figma design: https://www.figma.com/file/h3G2z8II4ZRM1gv3CCUHTq/Data-Table?node-id=0%3A1
 
 This app reads in data from an API and creates a json. The displays in a table on the desktop and in cards if the window width is 768 or less. Formatting is provided by App.css.
 
