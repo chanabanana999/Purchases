@@ -1,6 +1,6 @@
 # Purchases project for ID.me by Chana Cohn
 
-## How to Run the Code
+## How To Run the Code
 This app was created using React v. 18.2 and Javascript. To run this app, you may have to run `npm ci`.
 To start the app in a browser:
 
@@ -12,7 +12,7 @@ Please run this in Chrome if possible. (Ideally, this should run in all supporte
 - To see the mobile view, make the browser less than 768px width and refresh the page.
 - To see the desktop view, make the browser full screen (or almost full screen) and refresh the page.
 
-## To run the tests
+## How To Run the Tests
 Tests were created using the react testing library. From a command prompt run:
 
 ```shell
