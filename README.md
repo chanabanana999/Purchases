@@ -2,7 +2,7 @@
 
 ## How to Run the Code
 This app was created using React v. 18.2 and Javascript. To run this app, you may have to run `npm ci`.
-To start the app in a browser.
+To start the app in a browser:
 
 ```shell
 npm start
