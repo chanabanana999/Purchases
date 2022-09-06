@@ -11,6 +11,7 @@ Please run this in Chrome if possible. (Ideally, this should run in all supporte
 - If the app does not open automatically, please browse to `http://localhost:3000`
 - To see the mobile view, make the browser less than 768px width and refresh the page.
 - To see the desktop view, make the browser full screen (or almost full screen) and refresh the page.
+- If you get a message that "Data is loading, please hold..." you might need to refresh the page.
 
 ## How To Run the Tests
 Tests were created using the react testing library. From a command prompt run:
@@ -61,6 +62,8 @@ I made some assumptions:
 - The Purchases component got pretty big. I'd prefer to have child components for the mobile and desktop render versions. I started attempting that, but it got cumbersome trying to pass all the props down and get everything working great in both mobile and desktop versions. In retrospect, I probably should have gotten that part working first cand had the data pass down to child components.
 
 - It might have been cool to make the three vertical dots on the desktop be clickable and then to display a message. (I didn't do this, but it would be a nice touch.)
+
+- There might be some other ways of doing things that don't result in console errors. I tried cleaning those up, but it started taking longer than I thought it should, and I moved on.
 
 ## Conclusion
 This was an enjoyable and challenging project. I did my best to hit all the concepts I thought the Figma and the requirements were driving toward, although I would prefer to be more thorough, such as in testing or getting the category colors to change.
