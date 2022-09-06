@@ -8,7 +8,7 @@ To start the app in a browser.
 npm start
 ```
 Please run this in Chrome if possible. (Ideally, this should run in all supported browsers, but this was the one I used.)
-
+- If the app does not open automatically, please browse to `http://localhost:3000`
 - To see the mobile view, make the browser less than 768px width and refresh the page.
 - To see the desktop view, make the browser full screen (or almost full screen) and refresh the page.
 
