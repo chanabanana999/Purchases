@@ -19,7 +19,7 @@ Tests were created using the react testing library. From a command prompt run:
 npm test
 ```
 
-There are not a lot of tests. With more time, I would add a test for a failed fetch and to verify that products are rendered on the page. There can also be tests added for checking that styling displays correctly at different window widths (per the requirements).
+There are not a lot of tests. With more time, I would add a test for a failed fetch and a test to verify that products are rendered on the page. There can also be tests added for checking that styling displays correctly at different window widths (per the requirements).
 
 ## Overview
 
