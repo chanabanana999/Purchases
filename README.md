@@ -26,7 +26,7 @@ There are not a lot of tests. With more time, I would add a test for a failed fe
 - Project instructions: https://www.dropbox.com/s/dncrz21vx6983lo/Frontend-Interview.pdf?dl=0
 - Project Figma design: https://www.figma.com/file/h3G2z8II4ZRM1gv3CCUHTq/Data-Table?node-id=0%3A1
 
-This app reads in data from an API and creates a json. The displays in a table on the desktop and in cards if the window width is 768 or less. Formatting is provided by App.css.
+This app reads in data from an API and creates a json. The response data displays in a table on the desktop and in cards if the window width is 768px width or less. Formatting is provided by `App.css`.
 
 I made some assumptions:
 - I read the price in pennies and then converted it to dollars. Another way to do this would be to assume the prices were already in dollcars and then add ".00" after fetching. Either way, some conversion is required in order to display what was shown in the figma. I went with the first option since the figma showed values in the pennies.
